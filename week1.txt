@@ -1,0 +1,20 @@
+1. My ip - 172.16.58.69
+   Neighbour - 172.16.58.72
+2. 
+
+3. host id - 172.16.58.69
+   mac - 6c:4b:90:30:e7:45
+   subnet - 255:255:255:0 
+ 
+4. neighbour mac - 6c:4b:90:30:e8:3a
+
+5. --- google.com ping statistics ---
+   6 packets transmitted, 0 received, 100% packet loss, time 5039ms
+   
+   --- facebook.com ping statistics ---
+   4 packets transmitted, 0 received, 100% packet loss, time 3024ms
+
+
+
+
+  
