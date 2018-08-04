@@ -11,7 +11,7 @@ int main() {
 	int len,result,sockfd,n=1;
 	struct sockaddr_in address;
 	char ch[256],buf[256];
-
+	char cmp[] = "QUIT";
 	sockfd = socket(AF_INET,SOCK_STREAM,0);
 	address.sin_family=AF_INET;
 	address.sin_addr.s_addr=htonl(INADDR_ANY);
@@ -22,7 +22,12 @@ int main() {
 		perror("\nCLIENT ERROR");
 		exit(1);
 	}
-	printf("RESPONSE : \n");
-	read(sockfd,buf,sizeof(buf));
-	puts(buf);
+	while(strcmp(cmp,buf)!=0) {
+		printf("Enter String\n");
+		scanf("%s",ch);
+		write(sockfd,ch,sizeof(ch));
+		printf("RESPONSE:\n");
+		read(sockfd,buf,sizeof(buf));
+		printf("%s\n", buf);
+	}
 }
